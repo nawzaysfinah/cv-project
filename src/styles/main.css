@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(to bottom, #b2f2ea, #8ac9a5);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.section input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.section button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background-color: #45a049;
+}
+
+.section strong {
+  font-weight: bold;
+}
