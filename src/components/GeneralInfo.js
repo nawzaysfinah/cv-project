@@ -1,5 +1,5 @@
-import React from "react";
 import "../styles/main.css";
+import React from "react";
 
 class GeneralInfo extends React.Component {
   constructor(props) {

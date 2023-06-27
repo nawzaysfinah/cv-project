@@ -1,16 +1,14 @@
-import React from "react";
 import "../styles/main.css";
+import React from "react";
 
-class Experience extends React.Component {
+class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isEditing: false,
-      company: "",
-      position: "",
-      tasks: "",
-      fromDate: "",
-      toDate: "",
+      school: "",
+      studyTitle: "",
+      studyDate: "",
     };
   }
 
@@ -24,69 +22,48 @@ class Experience extends React.Component {
   };
 
   handleSubmit = () => {
-    const { company, position, tasks, fromDate, toDate } = this.state;
+    const { school, studyTitle, studyDate } = this.state;
     // Submit the form or update the parent component's state
     // with the edited values
-    this.props.onSubmit(company, position, tasks, fromDate, toDate);
+    this.props.onSubmit(school, studyTitle, studyDate);
     this.setState({
       isEditing: false,
-      company: "",
-      position: "",
-      tasks: "",
-      fromDate: "",
-      toDate: "",
+      school: "",
+      studyTitle: "",
+      studyDate: "",
     });
   };
 
   render() {
-    const { isEditing, company, position, tasks, fromDate, toDate } =
-      this.state;
+    const { isEditing, school, studyTitle, studyDate } = this.state;
 
     if (isEditing) {
       return (
         <div>
           <div>
-            <label>Company:</label>
+            <label>School:</label>
             <input
               type="text"
-              name="company"
-              value={company}
+              name="school"
+              value={school}
               onChange={this.handleInputChange}
             />
           </div>
           <div>
-            <label>Position:</label>
+            <label>Title of Study:</label>
             <input
               type="text"
-              name="position"
-              value={position}
+              name="studyTitle"
+              value={studyTitle}
               onChange={this.handleInputChange}
             />
           </div>
           <div>
-            <label>Main Tasks:</label>
+            <label>Date of Study:</label>
             <input
               type="text"
-              name="tasks"
-              value={tasks}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <div>
-            <label>From Date:</label>
-            <input
-              type="text"
-              name="fromDate"
-              value={fromDate}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <div>
-            <label>To Date:</label>
-            <input
-              type="text"
-              name="toDate"
-              value={toDate}
+              name="studyDate"
+              value={studyDate}
               onChange={this.handleInputChange}
             />
           </div>
@@ -97,19 +74,13 @@ class Experience extends React.Component {
       return (
         <div>
           <div>
-            <strong>Company:</strong> {this.props.company}
+            <strong>School:</strong> {this.props.school}
           </div>
           <div>
-            <strong>Position:</strong> {this.props.position}
+            <strong>Title of Study:</strong> {this.props.studyTitle}
           </div>
           <div>
-            <strong>Main Tasks:</strong> {this.props.tasks}
-          </div>
-          <div>
-            <strong>From Date:</strong> {this.props.fromDate}
-          </div>
-          <div>
-            <strong>To Date:</strong> {this.props.toDate}
+            <strong>Date of Study:</strong> {this.props.studyDate}
           </div>
           <button onClick={this.handleEdit}>Edit</button>
         </div>
@@ -118,4 +89,4 @@ class Experience extends React.Component {
   }
 }
 
-export default Experience;
+export default Education;
